@@ -1,0 +1,43 @@
+//#1
+[2] === [2]  // False because it is an array
+[] === []   // Also false, it is an object
+
+
+//#2 
+const object1 = { a: 5 }; 
+a = 4
+const object2 = object1;     
+
+a = 4
+
+const object3 = object2;    
+
+a  = 4
+
+const object4 = { a: 5};        
+
+a = 5
+
+object1.a = 4;
+
+//#3. 
+class Animal {
+	constructor(name, type, color) {
+		this.name = name;
+		this.color = color;
+		this.type = type;
+	}
+}
+
+class Mamal extends Animal {
+	constructor(name, type, color) {
+		super(name, type, color)
+	}
+	sound() {
+		console.log(`Mooooooooo I'm ${this.name} and I'm a ${this.color} ${this.type}`);
+	}
+}
+
+const cow = new Mamal('Bisero', 'cow', 'black and white');
+
+
